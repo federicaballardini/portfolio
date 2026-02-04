@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+ font-family: "Instrument Serif", serif;
+  color: #f5f0e1;
+  background-color: #1e2523;
+  overflow-x: hidden;
+}
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.highlight { color: #9dc083; }
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  background: #9dc083; 
+  backdrop-filter: blur(5px); 
+  transition: top 0.4s;
+  z-index: 10;
+  border-bottom: 1px solid rgba(157, 192, 131, 0.2);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+nav ul li a:hover {
+  opacity: 0.7;
+}
+
+#intro {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  text-align: center;
+  background: #2b3323; 
+  padding-top: 10rem;
+}
+
+
+.intro-text {
+    z-index: 2;
+}
+.intro-text h1 {
+  font-size: 3em; 
+  margin-bottom: 0.5em;
+}
+.intro-text p {
+  font-size: 1.3em;
+  opacity: 0.9;
+}
+
+#aboutme {
+  padding: 120px 10vw;
+  background-color: #1e2523;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.4em;
+  color: #9dc083;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.about-text {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+
+
+section#contact {
+  text-align: center;
+  padding: 100px 20px;
+  background: #1e2523;
+  color: #f5f0e1;
+  
+}
+section#contact p {
+ justify-content: center;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto 10px auto;
+}
+
+section#contact h2 {
+    color: #9dc083;
+}
+
+.contact-link {
+    color: #9dc083;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.contact-link:hover {
+    color: #f5f0e1;
+}
+
+
+.image-intro {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 48vw;
+            background-image: url("media/mountains.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            aspect-ratio: 1 / 1;
+            z-index: 1;         }
+
+@media screen and (max-width: 900px) {
+            section#intro {
+                flex-direction: column;
+                gap: 50px;
+            }
+            .intro-text {
+                order: 1;
+            }
+			.image-intro {
+			               
+			                position: relative;
+			                top: auto; 
+			                left: auto;
+			                transform: none;
+			                width: 80vw;
+			                order: 2; 
+			                margin: 0px auto 0 auto;
+			            }
+			
+            
+			.intro-text h1 {
+			  font-size: 2em; 
+			  margin-bottom: 0.5em;
+			}
+			.intro-text p {
+			  font-size: 1em;
+			  opacity: 0.9;
+			}
+			
