@@ -181,13 +181,13 @@ section#contact h2 {
 			}
 
 			.about-image {
-			  flex: 0 0 300px; /* fixed width image */
+			  flex: 0 0 100px;
 			}
 
 			.about-image img {
 			  width: 100%;
 			  height: auto;
-			  border-radius: 12px; /* optional, makes it softer */
+			  border-radius: 12px;
 			}
 			
 			
