@@ -1,10 +1,11 @@
 body {
   margin: 0;
- font-family: "Instrument Serif", serif;
+  font-family: "Instrument Serif", serif;
   color: #f5f0e1;
   background-color: #1e2523;
   overflow-x: hidden;
 }
+
 .instrument-serif-regular {
   font-family: "Instrument Serif", serif;
   font-weight: 400;
@@ -17,8 +18,9 @@ body {
   font-style: italic;
 }
 
-
-.highlight { color: #9dc083; }
+.highlight { 
+  color: #9dc083; 
+}
 
 nav {
   position: fixed;
@@ -26,24 +28,27 @@ nav {
   width: 100%;
   display: flex;
   justify-content: right;
-  background: #9dc083; 
-  backdrop-filter: blur(5px); 
+  background: #9dc083;
+  backdrop-filter: blur(5px);
   transition: top 0.4s;
   z-index: 10;
   border-bottom: 1px solid rgba(157, 192, 131, 0.2);
 }
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
   padding: 1rem;
 }
+
 nav ul li a {
   text-decoration: none;
   color: black;
   font-weight: bold;
   transition: opacity 0.3s;
 }
+
 nav ul li a:hover {
   opacity: 0.7;
 }
@@ -52,23 +57,39 @@ nav ul li a:hover {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
   text-align: center;
-  background: #2b3323; 
+  background: #2b3323;
   padding-top: 10rem;
+  position: relative;
 }
-
 
 .intro-text {
-    z-index: 2;
+  z-index: 2;
 }
+
 .intro-text h1 {
-  font-size: 3em; 
+  font-size: 3em;
   margin-bottom: 0.5em;
 }
+
 .intro-text p {
   font-size: 1.3em;
   opacity: 0.9;
+}
+
+.image-intro {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48vw;
+  background-image: url("media/mountains.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 1 / 1;
+  z-index: 1;
 }
 
 #aboutme {
@@ -79,6 +100,13 @@ nav ul li a:hover {
 .about-container {
   max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-text-wrapper {
+  flex: 1;
 }
 
 .about-title {
@@ -95,111 +123,80 @@ nav ul li a:hover {
   opacity: 0.9;
 }
 
+.about-image {
+  flex: 0 0 220px;
+}
 
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
 
 section#contact {
   text-align: center;
   padding: 100px 20px;
   background: #1e2523;
   color: #f5f0e1;
-  
 }
+
 section#contact p {
- justify-content: center;
-  text-align: center;
   max-width: 60%;
   margin: 0 auto 10px auto;
 }
 
 section#contact h2 {
-    color: #9dc083;
+  color: #9dc083;
 }
 
 .contact-link {
-    color: #9dc083;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+  color: #9dc083;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
+
 .contact-link:hover {
-    color: #f5f0e1;
+  color: #f5f0e1;
 }
-
-
-.image-intro {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 48vw;
-            background-image: url("media/mountains.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            aspect-ratio: 1 / 1;
-            z-index: 1;         }
 
 @media screen and (max-width: 900px) {
-            section#intro {
-                flex-direction: column;
-                gap: 50px;
-            }
-            .intro-text {
-                order: 1;
-            }
-			.image-intro {
-			               
-			                position: relative;
-			                top: auto; 
-			                left: auto;
-			                transform: none;
-			                width: 80vw;
-			                order: 2; 
-			                margin: 0px auto 0 auto;
-			            }
-			
-            
-			.intro-text h1 {
-			  font-size: 2em; 
-			  margin-bottom: 0.5em;
-			}
-			.intro-text p {
-			  font-size: 1em;
-			  opacity: 0.9;
-			}
-			
-			
-			.about-container {
-			  display: flex;
-			  align-items: center;
-			  justify-content: space-between;
-			  gap: 3rem;
-			}
+  #intro {
+    flex-direction: column;
+    gap: 50px;
+  }
 
-			.about-text-wrapper {
-			  flex: 1;
-			}
+  .intro-text {
+    order: 1;
+  }
 
-			.about-image {
-			  flex: 0 0 100px;
-			}
+  .image-intro {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 80vw;
+    order: 2;
+    margin: 0 auto;
+  }
 
-			.about-image img {
-			  width: 100%;
-			  height: auto;
-			  border-radius: 12px;
-			}
-			
-			
-			@media (max-width: 768px) {
-			  .about-container {
-			    flex-direction: column;
-			  }
+  .intro-text h1 {
+    font-size: 2em;
+  }
 
-			  .about-image {
-			    flex: none;
-			    width: 100%;
-			    max-width: 300px;
-			  }
-			}
-			
+  .intro-text p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    flex: none;
+    max-width: 250px;
+  }
+}
