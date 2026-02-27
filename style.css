@@ -168,3 +168,38 @@ section#contact h2 {
 			  opacity: 0.9;
 			}
 			
+			
+			.about-container {
+			  display: flex;
+			  align-items: center;
+			  justify-content: space-between;
+			  gap: 3rem;
+			}
+
+			.about-text-wrapper {
+			  flex: 1;
+			}
+
+			.about-image {
+			  flex: 0 0 300px; /* fixed width image */
+			}
+
+			.about-image img {
+			  width: 100%;
+			  height: auto;
+			  border-radius: 12px; /* optional, makes it softer */
+			}
+			
+			
+			@media (max-width: 768px) {
+			  .about-container {
+			    flex-direction: column;
+			  }
+
+			  .about-image {
+			    flex: none;
+			    width: 100%;
+			    max-width: 300px;
+			  }
+			}
+			
